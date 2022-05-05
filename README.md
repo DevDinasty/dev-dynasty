@@ -1,4 +1,4 @@
-# dev-dynasty
+# Math Knights from DevDinasty!
 
 DevDynasty is a group of developers excited to build a 2D educational game.
 
