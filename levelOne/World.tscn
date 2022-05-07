@@ -1,14 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://levelOne/buttons/menuButton.png" type="Texture" id=3]
+[ext_resource path="res://levelOne/MenuButton.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 31.7473 )
 
 [sub_resource type="StreamTexture" id=3]
 flags = 4
-load_path = "res://.import/teste.png-80e88854b3a28129a5b367712ed83311.stex"
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
@@ -499,3 +500,26 @@ texture = ExtResource( 2 )
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall13"]
 rotation = -0.261799
 shape = SubResource( 2 )
+
+[node name="MenuButton" type="Button" parent="."]
+anchor_left = 0.888
+anchor_top = 0.063
+anchor_right = 0.888
+anchor_bottom = 0.063
+margin_left = -72.3121
+margin_top = -20.8
+margin_right = 72.6879
+margin_bottom = 21.2
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="MenuButton"]
+position = Vector2( 62, 15 )
+scale = Vector2( 0.5, 0.4 )
+texture = ExtResource( 3 )
+
+[connection signal="mouse_entered" from="MenuButton" to="MenuButton" method="_on_MenuButton_mouse_entered"]
+[connection signal="mouse_exited" from="MenuButton" to="MenuButton" method="_on_MenuButton_mouse_exited"]
+[connection signal="pressed" from="MenuButton" to="MenuButton" method="_on_MenuButton_pressed"]
