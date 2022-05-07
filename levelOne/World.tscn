@@ -1,11 +1,14 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://icon.png" type="Texture" id=1]
-[ext_resource path="res://Player.gd" type="Script" id=2]
-[ext_resource path="res://teste.png" type="Texture" id=3]
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 32, 31.7473 )
+
+[sub_resource type="StreamTexture" id=3]
+flags = 4
+load_path = "res://.import/teste.png-80e88854b3a28129a5b367712ed83311.stex"
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 32, 32 )
@@ -15,7 +18,7 @@ extents = Vector2( 32, 32 )
 [node name="Player" type="KinematicBody2D" parent="."]
 position = Vector2( 480, 416 )
 rotation = 0.177952
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -24,7 +27,7 @@ __meta__ = {
 position = Vector2( -13.3249, -1.35265 )
 rotation = -0.167877
 scale = Vector2( 0.58565, 0.2 )
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Player"]
 position = Vector2( 0.00012207, -0.25267 )
@@ -44,7 +47,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall"]
 rotation = -0.261799
@@ -61,7 +64,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall14"]
 rotation = -0.261799
@@ -78,7 +81,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall15"]
 rotation = -0.261799
@@ -95,7 +98,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall16"]
 rotation = -0.261799
@@ -112,7 +115,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall17"]
 rotation = -0.261799
@@ -129,7 +132,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall18"]
 rotation = -0.261799
@@ -146,7 +149,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall19"]
 rotation = -0.261799
@@ -163,7 +166,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall20"]
 rotation = -0.261799
@@ -180,7 +183,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall21"]
 rotation = -0.261799
@@ -197,7 +200,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall22"]
 rotation = -0.261799
@@ -214,7 +217,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall23"]
 rotation = -0.261799
@@ -231,7 +234,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall24"]
 rotation = -0.261799
@@ -248,7 +251,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall25"]
 rotation = -0.261799
@@ -265,7 +268,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall26"]
 rotation = -0.261799
@@ -282,7 +285,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall27"]
 rotation = -0.261799
@@ -299,7 +302,7 @@ __meta__ = {
 rotation = 2.88831
 scale = Vector2( 0.2, 0.175 )
 z_index = 1
-texture = ExtResource( 3 )
+texture = SubResource( 3 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall28"]
 rotation = -0.261799
@@ -315,7 +318,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall2"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall2"]
 rotation = -0.261799
@@ -331,7 +334,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall3"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall3"]
 rotation = -0.261799
@@ -347,7 +350,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall4"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall4"]
 rotation = -0.261799
@@ -363,7 +366,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall5"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall5"]
 rotation = -0.261799
@@ -379,7 +382,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall6"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall6"]
 rotation = -0.261799
@@ -395,7 +398,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall7"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall7"]
 rotation = -0.261799
@@ -411,7 +414,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall8"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall8"]
 rotation = -0.261799
@@ -427,7 +430,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall9"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall9"]
 rotation = -0.261799
@@ -443,7 +446,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall10"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall10"]
 rotation = -0.261799
@@ -459,7 +462,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall11"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall11"]
 rotation = -0.261799
@@ -475,7 +478,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall12"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall12"]
 rotation = -0.261799
@@ -491,7 +494,7 @@ __meta__ = {
 [node name="Sprite" type="Sprite" parent="Walls/Wall13"]
 modulate = Color( 0, 0, 0, 1 )
 rotation = 2.88831
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 
 [node name="shape" type="CollisionShape2D" parent="Walls/Wall13"]
 rotation = -0.261799
