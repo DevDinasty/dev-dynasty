@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://menu/buttonsSprites/startButton.png" type="Texture" id=1]
 [ext_resource path="res://Start.gd" type="Script" id=2]
 [ext_resource path="res://menu/buttonsSprites/exitButton.png" type="Texture" id=3]
 [ext_resource path="res://menu/menuBackground.png" type="Texture" id=4]
 [ext_resource path="res://Quit.gd" type="Script" id=5]
+[ext_resource path="res://fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 83
+font_data = ExtResource( 6 )
 
 [node name="Menu" type="Node2D"]
 position = Vector2( 256, 160 )
@@ -50,6 +55,16 @@ texture = ExtResource( 4 )
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
+
+[node name="Label" type="Label" parent="."]
+margin_left = 21.0
+margin_top = 47.0
+margin_right = 511.0
+margin_bottom = 141.0
+custom_colors/font_color = Color( 1, 0.87451, 0.027451, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.0431373, 0.0431373, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Math Knights"
 
 [connection signal="mouse_entered" from="Start" to="Start" method="_on_Start_mouse_entered"]
 [connection signal="mouse_exited" from="Start" to="Start" method="_on_Start_mouse_exited"]
