@@ -41,23 +41,15 @@ position = Vector2( 40, 12 )
 scale = Vector2( 0.009, 0.008 )
 texture = ExtResource( 3 )
 
-[node name="Title" type="Label" parent="."]
-margin_right = 128.0
-margin_bottom = 32.0
-rect_scale = Vector2( 4, 4 )
-text = "Math Knights"
-align = 1
-valign = 1
-uppercase = true
-__meta__ = {
-"_edit_group_": true
-}
-
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 256, 128 )
 scale = Vector2( 0.662, 0.77 )
 z_index = -1
 texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
 
 [connection signal="mouse_entered" from="Start" to="Start" method="_on_Start_mouse_entered"]
 [connection signal="mouse_exited" from="Start" to="Start" method="_on_Start_mouse_exited"]
