@@ -46,15 +46,11 @@ position = Vector2( 40, 12 )
 scale = Vector2( 0.009, 0.008 )
 texture = ExtResource( 3 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
 position = Vector2( 256, 128 )
 scale = Vector2( 0.662, 0.77 )
 z_index = -1
 texture = ExtResource( 4 )
-
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_right = 40.0
-margin_bottom = 40.0
 
 [node name="Label" type="Label" parent="."]
 margin_left = 21.0
