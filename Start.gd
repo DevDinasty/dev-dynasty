@@ -22,6 +22,6 @@ func _on_Start_pressed():
 	$Sprite.modulate.r = 0.5
 	$Sprite.modulate.g = 0.5
 	$Sprite.modulate.b = 0.5
-	get_tree().change_scene("res://levelOne/World.tscn")
+	get_tree().change_scene("res://mundo2d/mundoe2D.tscn")
 	
 	pass # Replace with function body.
