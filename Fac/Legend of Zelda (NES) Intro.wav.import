@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Legend of Zelda (NES) Intro.wav-e0bab68ba3b3f77314ef7972f878c2ca.sample"
+
+[deps]
+
+source_file="res://Fac/Legend of Zelda (NES) Intro.wav"
+dest_files=[ "res://.import/Legend of Zelda (NES) Intro.wav-e0bab68ba3b3f77314ef7972f878c2ca.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
