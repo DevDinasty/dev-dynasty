@@ -10,7 +10,7 @@ config_version=4
 
 [application]
 
-config/name="Plataforma"
+config/name="Math Knights"
 run/main_scene="res://menu/Menu.tscn"
 config/icon="res://icon.png"
 
