@@ -389,8 +389,10 @@ z_index = 4
 shape = SubResource( 5 )
 
 [node name="inimigo" type="KinematicBody2D" parent="."]
+
 position = Vector2( 327, 20 )
 script = ExtResource( 6 )
+
 __meta__ = {
 "_edit_group_": true
 }
@@ -457,3 +459,4 @@ autostart = true
 [connection signal="timeout" from="inimigo/Timer" to="inimigo" method="_on_Timer_timeout"]
 [connection signal="timeout" from="inimigo2/Timer" to="inimigo2" method="_on_Timer_timeout"]
 [connection signal="timeout" from="inimigo3/Timer" to="inimigo3" method="_on_Timer_timeout"]
+
