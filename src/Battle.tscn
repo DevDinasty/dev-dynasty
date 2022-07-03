@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/Background.png" type="Texture" id=1]
-[ext_resource path="res://mundo2d/gota.png" type="Texture" id=2]
+[ext_resource path="res://sprites/blobfish.webp" type="Texture" id=2]
 [ext_resource path="res://fonts/NES.tres" type="DynamicFont" id=3]
 [ext_resource path="res://src/Battle.gd" type="Script" id=4]
 [ext_resource path="res://src/Blobfish.tres" type="Resource" id=5]
@@ -156,6 +156,9 @@ tracks/0/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 enemy = ExtResource( 5 )
 
 [node name="Background" type="TextureRect" parent="."]
@@ -168,25 +171,28 @@ margin_bottom = -331.0
 rect_scale = Vector2( 2.5, 2.5 )
 texture = ExtResource( 1 )
 stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="EnemyContainer" type="VBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.635
-anchor_right = 0.5
-anchor_bottom = 0.635
-margin_left = -207.0
-margin_top = -198.0
-margin_right = 1841.0
-margin_bottom = 1764.0
-rect_scale = Vector2( 0.2, 0.2 )
+anchor_right = 0.509
+anchor_bottom = 0.653
+margin_left = -77.0
+margin_top = -116.0
+margin_right = 57.784
+margin_bottom = 65.2
 __meta__ = {
-"_edit_group_": true
+"_edit_group_": true,
+"_edit_use_anchors_": false
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
-margin_right = 2048.0
-margin_bottom = 60.0
-rect_min_size = Vector2( 0, 60 )
+margin_right = 144.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 0, 16 )
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
 step = 1.0
@@ -196,23 +202,24 @@ percent_visible = false
 [node name="Label" type="Label" parent="EnemyContainer/ProgressBar"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-margin_left = 185.0
 margin_top = -2.0
-margin_right = -211.0
+margin_right = 1.0
 margin_bottom = 2.0
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = ExtResource( 3 )
 align = 1
 valign = 1
 max_lines_visible = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Enemy" type="TextureRect" parent="EnemyContainer"]
-margin_top = 64.0
-margin_right = 2048.0
-margin_bottom = 2006.0
+margin_top = 20.0
+margin_right = 144.0
+margin_bottom = 148.0
 texture = ExtResource( 2 )
-stretch_mode = 2
-flip_h = true
+stretch_mode = 6
 
 [node name="PlayerPanel" type="Panel" parent="."]
 anchor_top = 1.0

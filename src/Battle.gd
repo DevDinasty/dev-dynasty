@@ -75,6 +75,11 @@ func _on_Attack_pressed():
 	$ActionsPanel2.show()
 
 func _on_1_pressed():
+	if certo==1:
+		display_text("Errooo!")
+		yield(self, "textbox_closed")
+		enemy_turn()
+	
 	display_text("You swing your piercing sword!")
 	yield(self, "textbox_closed")
 	
@@ -101,14 +106,61 @@ func _on_1_pressed():
 
 
 func _on_2_pressed():
+	
 	display_text("Errooo!")
 	yield(self, "textbox_closed")
 	enemy_turn()
+	
+	display_text("You swing your piercing sword!")
+	yield(self, "textbox_closed")
+	
+	current_enemy_health = max(0, current_enemy_health - damage)
+	set_health($EnemyContainer/ProgressBar, current_enemy_health, enemy.health)
+
+	$AnimationPlayer.play("enemy_damaged")
+	yield($AnimationPlayer, "animation_finished")
+	
+	display_text("You dealt %d damage!" % damage)
+	yield(self, "textbox_closed")
+	
+	if current_enemy_health == 0:
+		display_text("%s was defeated!" % enemy.name)
+		yield(self, "textbox_closed")
+		
+		$AnimationPlayer.play("enemy_died")
+		yield($AnimationPlayer, "animation_finished")
+		
+		yield(get_tree().create_timer(0.25), "timeout")
+		get_tree().quit()
+	
 
 func _on_3_pressed():
+	
 	display_text("Errooo!")
 	yield(self, "textbox_closed")
 	enemy_turn()
+	
+	display_text("You swing your piercing sword!")
+	yield(self, "textbox_closed")
+	
+	current_enemy_health = max(0, current_enemy_health - damage)
+	set_health($EnemyContainer/ProgressBar, current_enemy_health, enemy.health)
+
+	$AnimationPlayer.play("enemy_damaged")
+	yield($AnimationPlayer, "animation_finished")
+	
+	display_text("You dealt %d damage!" % damage)
+	yield(self, "textbox_closed")
+	
+	if current_enemy_health == 0:
+		display_text("%s was defeated!" % enemy.name)
+		yield(self, "textbox_closed")
+		
+		$AnimationPlayer.play("enemy_died")
+		yield($AnimationPlayer, "animation_finished")
+		
+		yield(get_tree().create_timer(0.25), "timeout")
+		get_tree().quit()
 
 func _on_Defend_pressed():
 	is_defending = true
