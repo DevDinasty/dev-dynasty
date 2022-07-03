@@ -4,7 +4,7 @@ var motion = Vector2()
 #0 sem ação, 1 = direita, 2 = esquerda.
 var state = 0
 
-var health = 100 
+var health = 130
 
 const STOP = 0
 const GO_UP = 100
