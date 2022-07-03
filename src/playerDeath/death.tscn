@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://src/playerDeath/TryAgain.gd" type="Script" id=1]
+[ext_resource path="res://src/playerDeath/buttonSprite/tryAgain.png" type="Texture" id=2]
+[ext_resource path="res://menu/menuTheme.wav" type="AudioStream" id=3]
+[ext_resource path="res://fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://menu/AudioStreamPlayer.gd" type="Script" id=5]
+[ext_resource path="res://src/playerDeath/menuBackground.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 83
+font_data = ExtResource( 4 )
+
+[node name="Death" type="Node2D"]
+
+[node name="TryAgain" type="Button" parent="."]
+margin_left = 362.0
+margin_top = 360.0
+margin_right = 519.0
+margin_bottom = 388.0
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="TryAgain"]
+position = Vector2( 80.75, 14.45 )
+scale = Vector2( 0.306818, 0.281429 )
+texture = ExtResource( 2 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 513, 304 )
+scale = Vector2( 0.662, 0.77 )
+z_index = -1
+texture = ExtResource( 6 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 283.0
+margin_top = 243.0
+margin_right = 789.0
+margin_bottom = 337.0
+rect_scale = Vector2( 0.9, 0.9 )
+custom_colors/font_color = Color( 1, 0.87451, 0.027451, 1 )
+custom_colors/font_color_shadow = Color( 1, 0.0431373, 0.0431373, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Você Morreu!"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -20.0
+pitch_scale = 0.9
+autoplay = true
+script = ExtResource( 5 )
+
+[connection signal="mouse_entered" from="TryAgain" to="TryAgain" method="_on_Start_mouse_entered"]
+[connection signal="mouse_exited" from="TryAgain" to="TryAgain" method="_on_Start_mouse_exited"]
+[connection signal="pressed" from="TryAgain" to="TryAgain" method="_on_Start_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_AudioStreamPlayer_finished"]
