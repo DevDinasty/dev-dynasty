@@ -108,7 +108,7 @@ func enemy_turn():
 		display_text("Your life is in danger , u run away safely!")
 		yield(self, "textbox_closed")
 		yield(get_tree().create_timer(0.25), "timeout")
-		get_tree().change_scene("res://menu/Menu.tscn")
+		get_tree().change_scene("res://src/playerDeath/death.tscn")
 	
 
 func _on_Run_pressed():

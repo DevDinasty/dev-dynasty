@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/menuBackground.png-51e0623cda1e12d1fa2e41a508922790.stex"
+path="res://.import/tryAgain.png-e99c5a47c56173621626e5b4ce91ebe4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menu/menuBackground.png"
-dest_files=[ "res://.import/menuBackground.png-51e0623cda1e12d1fa2e41a508922790.stex" ]
+source_file="res://src/playerDeath/buttonSprite/tryAgain.png"
+dest_files=[ "res://.import/tryAgain.png-e99c5a47c56173621626e5b4ce91ebe4.stex" ]
 
 [params]
 
