@@ -12,6 +12,9 @@ const GO_LEFT = -100
 
 func _physics_process(delta):
 	
+	if (GlobalBattle.current_enemy_health <= 0): 
+		queue_free()
+	
 	if state == 0:
 		motion.x = STOP
 		motion.y = STOP
