@@ -119,3 +119,4 @@
 [node name="DecorationTerrain" type="TileMap"]
 tile_set = SubResource( 1 )
 format = 1
+tile_data = PoolIntArray( 196609, 1, 0, 196610, 1, 0, 196611, 1, 0, 196620, 1, 0, 262157, 1, 0, 262158, 1, 0, 393218, 1, 0, 393229, 1, 0, 458756, 1, 0, 458761, 1, 0, 655358, 1, 0 )

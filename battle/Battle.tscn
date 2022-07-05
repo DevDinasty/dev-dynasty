@@ -231,9 +231,9 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="PlayerPanel/PlayerData"]
-margin_top = 9.0
+margin_top = 6.0
 margin_right = 502.0
-margin_bottom = 22.0
+margin_bottom = 26.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
 text = "PLAYER"
@@ -292,7 +292,7 @@ __meta__ = {
 
 [node name="Attack" type="Button" parent="ActionsPanel/Actions"]
 margin_right = 98.0
-margin_bottom = 20.0
+margin_bottom = 22.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
@@ -309,7 +309,7 @@ text = "Attack"
 [node name="Defend" type="Button" parent="ActionsPanel/Actions"]
 margin_left = 104.0
 margin_right = 203.0
-margin_bottom = 20.0
+margin_bottom = 22.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
@@ -326,7 +326,7 @@ text = "Defend"
 [node name="Run" type="Button" parent="ActionsPanel/Actions"]
 margin_left = 209.0
 margin_right = 308.0
-margin_bottom = 20.0
+margin_bottom = 22.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
@@ -367,7 +367,7 @@ __meta__ = {
 
 [node name="1" type="Button" parent="ActionsPanel2/Actions2"]
 margin_right = 45.0
-margin_bottom = 21.0
+margin_bottom = 22.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
@@ -384,7 +384,7 @@ text = "a"
 [node name="2" type="Button" parent="ActionsPanel2/Actions2"]
 margin_left = 51.0
 margin_right = 97.0
-margin_bottom = 21.0
+margin_bottom = 22.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
@@ -401,7 +401,7 @@ text = "b"
 [node name="3" type="Button" parent="ActionsPanel2/Actions2"]
 margin_left = 103.0
 margin_right = 149.0
-margin_bottom = 21.0
+margin_bottom = 22.0
 focus_mode = 0
 mouse_default_cursor_shape = 2
 size_flags_horizontal = 3
