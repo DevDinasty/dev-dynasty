@@ -5,9 +5,13 @@
 [ext_resource path="res://mundo2d/fogo.png" type="Texture" id=3]
 [ext_resource path="res://mundo2d/grass.jpg" type="Texture" id=4]
 [ext_resource path="res://mundo2d/bush.png" type="Texture" id=5]
+<<<<<<< Updated upstream
 [ext_resource path="res://mundo2d/inimigo.gd" type="Script" id=6]
 [ext_resource path="res://mundo2d/inimigo3.gd" type="Script" id=7]
 [ext_resource path="res://mundo2d/inimigo2.gd" type="Script" id=8]
+=======
+[ext_resource path="res://mundo-certo/inimigo.gd" type="Script" id=6]
+>>>>>>> Stashed changes
 
 [sub_resource type="Shader" id=3]
 code = "// NOTE: Shader automatically converted from Godot Engine 3.4.4.stable's CanvasItemMaterial.
