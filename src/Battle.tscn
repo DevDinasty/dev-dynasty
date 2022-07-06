@@ -248,7 +248,7 @@ margin_right = 474.0
 margin_bottom = 28.0
 size_flags_horizontal = 3
 custom_fonts/font = ExtResource( 3 )
-text = "PLAYER"
+text = "Jogador"
 align = 1
 
 [node name="ProgressBar" type="ProgressBar" parent="PlayerPanel/PlayerData"]
@@ -317,7 +317,7 @@ custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
 enabled_focus_mode = 0
-text = "Attack"
+text = "Atacar"
 
 [node name="Defend" type="Button" parent="ActionsPanel/Actions"]
 margin_left = 119.0
@@ -334,7 +334,7 @@ custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
 enabled_focus_mode = 0
-text = "Defend"
+text = "Defender"
 
 [node name="Run" type="Button" parent="ActionsPanel/Actions"]
 margin_left = 238.0
@@ -351,7 +351,7 @@ custom_styles/hover = SubResource( 5 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 4 )
 enabled_focus_mode = 0
-text = "Run"
+text = "Fugir"
 
 [node name="ActionsPanel2" type="Panel" parent="."]
 anchor_left = 0.5

@@ -64,7 +64,7 @@ func _ready():
 	$ActionsPanel.hide()
 	$ActionsPanel2.hide()
 	
-	display_text("A wild %s appears!" % enemy.name.to_upper())
+	display_text("Um selvagem %s apareceu!" % enemy.name.to_upper())
 	yield(self, "textbox_closed")
 	$ActionsPanel.show()
 
@@ -84,7 +84,7 @@ func display_text(text):
 	$Textbox/Label.text = text
 
 func enemy_turn():
-	display_text("%s launches at you fiercely!" % enemy.name)
+	display_text("%s atacou você agressivamente!" % enemy.name)
 	yield(self, "textbox_closed")
 	
 	$ActionsPanel2.hide()
@@ -93,26 +93,26 @@ func enemy_turn():
 		is_defending = false
 		$AnimationPlayer.play("mini_shake")
 		yield($AnimationPlayer, "animation_finished")
-		display_text("You defended successfully!")
+		display_text("Uau, bela defesa!")
 		yield(self, "textbox_closed")
 	else:
 		current_player_health = max(0, current_player_health - enemy.damage)
 		set_health($PlayerPanel/PlayerData/ProgressBar, current_player_health, max_health)
 		$AnimationPlayer.play("shake")
 		yield($AnimationPlayer, "animation_finished")
-		display_text("%s dealt %d damage!" % [enemy.name, enemy.damage])
+		display_text("%s teve %d danos!" % [enemy.name, enemy.damage])
 		yield(self, "textbox_closed")
 	$ActionsPanel.show()
 	
 	if current_player_health <= 0:
-		display_text("Your life is in danger , u run away safely!")
+		display_text("A sua vida está em perigo , fuja para se proteger!")
 		yield(self, "textbox_closed")
 		yield(get_tree().create_timer(0.25), "timeout")
 		get_tree().change_scene("res://src/playerDeath/death.tscn")
 	
 
 func _on_Run_pressed():
-	display_text("Got away safely!")
+	display_text("Fugiu com segurança!")
 	yield(self, "textbox_closed")
 	yield(get_tree().create_timer(0.25), "timeout")
 	get_tree().change_scene("res://mundo-certo/Level.tscn")
@@ -136,7 +136,7 @@ func _on_1_pressed():
 	var resposta = questions[random_value].resposta
 	
 	if resposta == 1:
-		display_text("You swing your piercing sword!")
+		display_text("Balançando a sua espada afiada!")
 		yield(self, "textbox_closed")
 		
 		current_enemy_health = max(0, current_enemy_health - damage)
@@ -145,11 +145,11 @@ func _on_1_pressed():
 		$AnimationPlayer.play("enemy_damaged")
 		yield($AnimationPlayer, "animation_finished")
 		
-		display_text("You dealt %d damage!" % damage)
+		display_text("Você teve %d danos!" % damage)
 		yield(self, "textbox_closed")
 		
 		if current_enemy_health == 0:
-			display_text("%s was defeated!" % enemy.name)
+			display_text("%s foi derrotado!" % enemy.name)
 			yield(self, "textbox_closed")
 			
 			$AnimationPlayer.play("enemy_died")
@@ -161,7 +161,7 @@ func _on_1_pressed():
 		if current_enemy_health > 0:
 			enemy_turn()
 	else:
-		display_text("Errooo!")
+		display_text("Aconteceu um erro inesperado!")
 		yield(self, "textbox_closed")
 		enemy_turn()
 	
@@ -172,7 +172,7 @@ func _on_2_pressed():
 	var resposta = questions[random_value].resposta
 	
 	if resposta == 2:
-		display_text("You swing your piercing sword!")
+		display_text("Balançando a sua espada afiada!")
 		yield(self, "textbox_closed")
 		
 		current_enemy_health = max(0, current_enemy_health - damage)
@@ -181,11 +181,11 @@ func _on_2_pressed():
 		$AnimationPlayer.play("enemy_damaged")
 		yield($AnimationPlayer, "animation_finished")
 		
-		display_text("You dealt %d damage!" % damage)
+		display_text("Você teve %d danos!" % damage)
 		yield(self, "textbox_closed")
 		
 		if current_enemy_health == 0:
-			display_text("%s was defeated!" % enemy.name)
+			display_text("%s foi derrotado!" % enemy.name)
 			yield(self, "textbox_closed")
 			
 			$AnimationPlayer.play("enemy_died")
@@ -197,7 +197,7 @@ func _on_2_pressed():
 		if current_enemy_health > 0:
 			enemy_turn()
 	else:
-		display_text("Errooo!")
+		display_text("Ops, aconteceu um erro!")
 		yield(self, "textbox_closed")
 		enemy_turn()
 	
@@ -207,7 +207,7 @@ func _on_3_pressed():
 	var resposta = questions[random_value].resposta
 	
 	if resposta == 3:
-		display_text("You swing your piercing sword!")
+		display_text("Balançando a sua espada afiada!")
 		yield(self, "textbox_closed")
 		
 		current_enemy_health = max(0, current_enemy_health - damage)
@@ -216,11 +216,11 @@ func _on_3_pressed():
 		$AnimationPlayer.play("enemy_damaged")
 		yield($AnimationPlayer, "animation_finished")
 		
-		display_text("You dealt %d damage!" % damage)
+		display_text("Ops, você teve %d danos!" % damage)
 		yield(self, "textbox_closed")
 		
 		if current_enemy_health == 0:
-			display_text("%s was defeated!" % enemy.name)
+			display_text("%s foi derrotado!" % enemy.name)
 			yield(self, "textbox_closed")
 			
 			$AnimationPlayer.play("enemy_died")
@@ -232,7 +232,7 @@ func _on_3_pressed():
 		if current_enemy_health > 0:
 			enemy_turn()
 	else:
-		display_text("Errooo!")
+		display_text("Estranho, aconteceu um erro!")
 		yield(self, "textbox_closed")
 		enemy_turn()
 	
@@ -240,7 +240,7 @@ func _on_3_pressed():
 func _on_Defend_pressed():
 	is_defending = true
 	
-	display_text("You prepare defensively!")
+	display_text("Você se preparou defensivamente!")
 	yield(self, "textbox_closed")
 	
 	yield(get_tree().create_timer(0.25), "timeout")
