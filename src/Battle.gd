@@ -64,7 +64,7 @@ func _ready():
 	$ActionsPanel.hide()
 	$ActionsPanel2.hide()
 	
-	display_text("Um selvagem %s apareceu!" % enemy.name.to_upper())
+	display_text("Um inimigo selvagem apareceu!")
 	yield(self, "textbox_closed")
 	$ActionsPanel.show()
 
@@ -84,7 +84,7 @@ func display_text(text):
 	$Textbox/Label.text = text
 
 func enemy_turn():
-	display_text("%s atacou você agressivamente!" % enemy.name)
+	display_text("O inimigo atacou você agressivamente!")
 	yield(self, "textbox_closed")
 	
 	$ActionsPanel2.hide()
@@ -100,7 +100,7 @@ func enemy_turn():
 		set_health($PlayerPanel/PlayerData/ProgressBar, current_player_health, max_health)
 		$AnimationPlayer.play("shake")
 		yield($AnimationPlayer, "animation_finished")
-		display_text("%s teve %d danos!" % [enemy.name, enemy.damage])
+		display_text("O inimigo recebeu %d de dano!" % enemy.damage)
 		yield(self, "textbox_closed")
 	$ActionsPanel.show()
 	
@@ -145,11 +145,11 @@ func _on_1_pressed():
 		$AnimationPlayer.play("enemy_damaged")
 		yield($AnimationPlayer, "animation_finished")
 		
-		display_text("Você teve %d danos!" % damage)
+		display_text("Você recebeu %d de dano!" % damage)
 		yield(self, "textbox_closed")
 		
 		if current_enemy_health == 0:
-			display_text("%s foi derrotado!" % enemy.name)
+			display_text("O inimigo foi derrotado!")
 			yield(self, "textbox_closed")
 			
 			$AnimationPlayer.play("enemy_died")
@@ -181,11 +181,11 @@ func _on_2_pressed():
 		$AnimationPlayer.play("enemy_damaged")
 		yield($AnimationPlayer, "animation_finished")
 		
-		display_text("Você teve %d danos!" % damage)
+		display_text("Você recebeu %d de dano!" % damage)
 		yield(self, "textbox_closed")
 		
 		if current_enemy_health == 0:
-			display_text("%s foi derrotado!" % enemy.name)
+			display_text("O inimigo foi derrotado!" % enemy.name)
 			yield(self, "textbox_closed")
 			
 			$AnimationPlayer.play("enemy_died")
@@ -216,11 +216,11 @@ func _on_3_pressed():
 		$AnimationPlayer.play("enemy_damaged")
 		yield($AnimationPlayer, "animation_finished")
 		
-		display_text("Ops, você teve %d danos!" % damage)
+		display_text("Ops, você recebeu %d de dano!" % damage)
 		yield(self, "textbox_closed")
 		
 		if current_enemy_health == 0:
-			display_text("%s foi derrotado!" % enemy.name)
+			display_text("O inimigo foi derrotado!" % enemy.name)
 			yield(self, "textbox_closed")
 			
 			$AnimationPlayer.play("enemy_died")
