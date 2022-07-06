@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://sprites/Background.png" type="Texture" id=1]
-[ext_resource path="res://sprites/blobfish.webp" type="Texture" id=2]
+[ext_resource path="res://sprites/ghost-shriek.png" type="Texture" id=2]
 [ext_resource path="res://fonts/NES.tres" type="DynamicFont" id=3]
 [ext_resource path="res://src/Battle.gd" type="Script" id=4]
 [ext_resource path="res://src/Blobfish.tres" type="Resource" id=5]
@@ -156,6 +156,9 @@ tracks/0/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 enemy = ExtResource( 5 )
 
 [node name="Background" type="TextureRect" parent="."]
@@ -177,19 +180,21 @@ anchor_left = 0.5
 anchor_top = 0.635
 anchor_right = 0.509
 anchor_bottom = 0.653
-margin_left = -77.0
-margin_top = -116.0
-margin_right = 57.784
-margin_bottom = 65.2
+margin_left = -271.0
+margin_top = -118.0
+margin_right = -130.216
+margin_bottom = -28.8
+rect_scale = Vector2( 3.5, 3.5 )
 __meta__ = {
 "_edit_group_": true,
 "_edit_use_anchors_": false
 }
 
 [node name="ProgressBar" type="ProgressBar" parent="EnemyContainer"]
-margin_right = 144.0
+margin_right = 150.0
 margin_bottom = 16.0
 rect_min_size = Vector2( 0, 16 )
+rect_scale = Vector2( 1, 0.5 )
 custom_styles/fg = SubResource( 1 )
 custom_styles/bg = SubResource( 2 )
 step = 1.0
@@ -213,10 +218,11 @@ __meta__ = {
 
 [node name="Enemy" type="TextureRect" parent="EnemyContainer"]
 margin_top = 20.0
-margin_right = 144.0
-margin_bottom = 148.0
+margin_right = 150.0
+margin_bottom = 100.0
 texture = ExtResource( 2 )
-stretch_mode = 6
+stretch_mode = 4
+flip_h = true
 
 [node name="PlayerPanel" type="Panel" parent="."]
 anchor_top = 1.0
