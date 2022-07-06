@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/playerDeath/menuBackground.png" type="Texture" id=1]
 [ext_resource path="res://fonts/MedievalSharp-Regular.ttf" type="DynamicFontData" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Fac/return.gd" type="Script" id=6]
 [ext_resource path="res://Fac/Legend of Zelda (NES) Intro.wav" type="AudioStream" id=7]
 [ext_resource path="res://menu/AudioStreamPlayer.gd" type="Script" id=8]
+[ext_resource path="res://Fac/faq.gd" type="Script" id=9]
+[ext_resource path="res://Fac/sprites/faq.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 83
@@ -98,8 +100,27 @@ pitch_scale = 0.9
 autoplay = true
 script = ExtResource( 8 )
 
+[node name="faq" type="Button" parent="."]
+margin_left = 596.0
+margin_top = 559.0
+margin_right = 671.0
+margin_bottom = 579.0
+rect_scale = Vector2( 2, 2 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="faq"]
+position = Vector2( 37.45, 9.5 )
+scale = Vector2( 0.170426, 0.177821 )
+texture = ExtResource( 10 )
+
 [connection signal="mouse_entered" from="return" to="return" method="_on_Start_mouse_entered"]
 [connection signal="mouse_exited" from="return" to="return" method="_on_Start_mouse_exited"]
 [connection signal="pressed" from="return" to="return" method="_on_Start_pressed"]
 [connection signal="finished" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_AudioStreamPlayer_finished"]
 [connection signal="tree_entered" from="AudioStreamPlayer" to="AudioStreamPlayer" method="_on_AudioStreamPlayer_tree_entered"]
+[connection signal="mouse_entered" from="faq" to="faq" method="_on_Start_mouse_entered"]
+[connection signal="mouse_exited" from="faq" to="faq" method="_on_Start_mouse_exited"]
+[connection signal="pressed" from="faq" to="faq" method="_on_Start_pressed"]

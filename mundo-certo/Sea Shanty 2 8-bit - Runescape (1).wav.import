@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Sea Shanty 2 8-bit - Runescape (1).wav-b3f8aa143bb4cc0addd587b3e8ba3e0d.sample"
+
+[deps]
+
+source_file="res://mundo-certo/Sea Shanty 2 8-bit - Runescape (1).wav"
+dest_files=[ "res://.import/Sea Shanty 2 8-bit - Runescape (1).wav-b3f8aa143bb4cc0addd587b3e8ba3e0d.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
