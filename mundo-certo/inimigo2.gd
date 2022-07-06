@@ -11,9 +11,6 @@ const GO_RIGHT = 100
 const GO_LEFT = -100
 
 func _physics_process(delta):
-	
-	
-	
 	if state == 0:
 		motion.x = STOP
 		motion.y = STOP
