@@ -115,7 +115,7 @@ func _on_Run_pressed():
 	display_text("Got away safely!")
 	yield(self, "textbox_closed")
 	yield(get_tree().create_timer(0.25), "timeout")
-	get_tree().change_scene("res://mundo2d/mundoe2D.tscn")
+	get_tree().change_scene("res://mundo-certo/Level.tscn")
 
 
 func _on_Attack_pressed():
@@ -156,9 +156,10 @@ func _on_1_pressed():
 			yield($AnimationPlayer, "animation_finished")
 			
 			yield(get_tree().create_timer(0.25), "timeout")
-			get_tree().change_scene("res://mundo2d/mundoe2D.tscn")
+			get_tree().change_scene("res://mundo-certo/Level.tscn")
 		
-		enemy_turn()
+		if current_enemy_health > 0:
+			enemy_turn()
 	else:
 		display_text("Errooo!")
 		yield(self, "textbox_closed")
@@ -191,9 +192,10 @@ func _on_2_pressed():
 			yield($AnimationPlayer, "animation_finished")
 			
 			yield(get_tree().create_timer(0.25), "timeout")
-			get_tree().change_scene("res://mundo2d/mundoe2D.tscn")
+			get_tree().change_scene("res://mundo-certo/Level.tscn")
 		
-		enemy_turn()
+		if current_enemy_health > 0:
+			enemy_turn()
 	else:
 		display_text("Errooo!")
 		yield(self, "textbox_closed")
@@ -225,9 +227,10 @@ func _on_3_pressed():
 			yield($AnimationPlayer, "animation_finished")
 			
 			yield(get_tree().create_timer(0.25), "timeout")
-			get_tree().change_scene("res://mundo2d/mundoe2D.tscn")
+			get_tree().change_scene("res://mundo-certo/Level.tscn")
 		
-		enemy_turn()
+		if current_enemy_health > 0:
+			enemy_turn()
 	else:
 		display_text("Errooo!")
 		yield(self, "textbox_closed")
