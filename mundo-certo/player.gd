@@ -9,6 +9,8 @@ export(int) var speed
 func _physics_process(_delta: float) -> void:
 	move()
 	animate()
+	if Input.is_action_pressed("ui_accept"):
+		get_tree().change_scene("res://src/Battle.tscn")
 
 func move() -> void:
 	var direction_vector: Vector2 = Vector2(
