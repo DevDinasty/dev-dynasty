@@ -185,7 +185,7 @@ func _on_2_pressed():
 		yield(self, "textbox_closed")
 		
 		if current_enemy_health == 0:
-			display_text("O inimigo foi derrotado!" % enemy.name)
+			display_text("O inimigo foi derrotado!")
 			yield(self, "textbox_closed")
 			
 			$AnimationPlayer.play("enemy_died")
